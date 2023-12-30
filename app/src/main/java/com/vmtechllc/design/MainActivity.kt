@@ -9,7 +9,10 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
@@ -67,4 +70,12 @@ fun ClickableButton(){
         shape = MaterialTheme.shapes.small
     ) { Text(text = "Click here")}
 }
-
+@Preview
+@Composable
+fun NameInput(){
+    val textState = remember {
+        mutableStateOf("")
+    }
+    TextField(value = textState.value, onValueChange = {newValue -> textState.value = newValue},
+        label = { Text(text = "Your name")})
+}
