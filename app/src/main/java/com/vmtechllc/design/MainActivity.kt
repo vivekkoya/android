@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -53,5 +55,16 @@ fun GreetingPreview() {
 @Composable
 fun FriendlyMessage(){
     Text(text = "Greetings!", fontStyle = FontStyle.Italic, fontFamily = FontFamily.SansSerif, color = Color.Blue, fontWeight = FontWeight.Bold)
+}
+@Preview
+@Composable
+fun ClickableButton(){
+    Button(
+        onClick = {/* callback */}, 
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Color.Cyan,
+            contentColor = Color.Magenta),
+        shape = MaterialTheme.shapes.small
+    ) { Text(text = "Click here")}
 }
 
