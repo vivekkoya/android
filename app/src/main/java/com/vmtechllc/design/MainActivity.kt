@@ -151,8 +151,8 @@ fun MyFloatingActionButton(){
             color = Color.Magenta,
             shape = CircleShape,
             content = {})
-            Text(text = "+",
-            modifier = Modifier.align(Alignment.Center))
+            Text(text = "+", fontSize = 48.sp,
+            modifier = Modifier.align(Alignment.Center)) // The "+" can be aligned relative to other components with the Alignment Argument
     }
 }
 
