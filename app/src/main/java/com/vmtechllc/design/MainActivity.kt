@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -28,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.modifier.modifierLocalMapOf
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -132,7 +134,7 @@ fun HorizontalNumbersList(){
 @Preview(showBackground = true)
 @Composable
 fun NamesVerticalList() {
-    Column (verticalArrangement = Arrangement.SpaceEvenly, horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxSize()){
+    Column (verticalArrangement = Arrangement.SpaceEvenly, horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()){
         Text("John", fontSize =  36.sp)
         Text("Amanda", fontSize =  36.sp)
         Text("Mike", fontSize =  36.sp)
@@ -140,3 +142,18 @@ fun NamesVerticalList() {
 
     }
 }
+@Preview
+@Composable
+fun MyFloatingActionButton(){
+    Box{
+        Surface (
+            modifier = Modifier.size(64.dp),
+            color = Color.Magenta,
+            shape = CircleShape,
+            content = {})
+            Text(text = "+",
+            modifier = Modifier.align(Alignment.Center))
+    }
+}
+
+
