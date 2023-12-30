@@ -7,6 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -125,5 +126,17 @@ fun HorizontalNumbersList(){
         Text("2", fontSize = 36.sp, fontFamily = FontFamily.SansSerif)
         Text("3", fontSize = 36.sp, fontFamily = FontFamily.SansSerif)
         Text("4", fontSize = 36.sp, fontFamily = FontFamily.SansSerif)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun NamesVerticalList() {
+    Column (verticalArrangement = Arrangement.SpaceEvenly, horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxSize()){
+        Text("John", fontSize =  36.sp)
+        Text("Amanda", fontSize =  36.sp)
+        Text("Mike", fontSize =  36.sp)
+        Text("Albert", fontSize =  36.sp)
+
     }
 }
